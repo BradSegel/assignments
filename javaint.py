@@ -10,6 +10,8 @@
 #   Hexadecimal: Base 16, whose digits consist of the numbers 0 through 9 and the letters A through F
 #   Binary: Base 2, whose digits consists of the numbers 0 and 1 (you can create binary literals in Java SE 7 and later)
 #   Octal: Base 8, 0 followed by the numbers 0 through 7
+#   allow underscores inside 
+#
 #
 #   Research Sources:
 #   https://stuff.mit.edu/afs/sipb/user/marc/hotjava/doc/javaspec/javaspec_3.html#HEADING7
@@ -117,6 +119,9 @@ class TestForJavaLiteralsUsingPython(unittest.TestCase):
 
     def test_should_fail_dec_test(self):
         self.assertFalse(isJavaInt('ohaidere'))
+
+    def test_just_an_l(self):
+        self.assertFalse(isJavaInt('l'))
 
     def test_should_fail_oct_test(self):
         self.assertFalse(isJavaInt('0asdf'))
