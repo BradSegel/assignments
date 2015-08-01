@@ -13,8 +13,9 @@ def merge_sort(unsorted_list):
         return (unsorted_list, inversion_count)
 
     # RECURSE!!
-    a,a_inversion_count = merge_sort(unsorted_list[:(l/2)])
-    b,b_inversion_count = merge_sort(unsorted_list[(l/2):])
+    split_idx = l/2
+    a,a_inversion_count = merge_sort(unsorted_list[:split_idx])
+    b,b_inversion_count = merge_sort(unsorted_list[split_idx:])
     inversion_count = a_inversion_count + b_inversion_count
 
     while b: # we're putting b into a, so we don't want to stop while there's b
@@ -50,3 +51,7 @@ if __name__ == '__main__':
 
     print "brute: {}".format(get_inversion_count(nums))
     print "merge: {}".format(merge_sort(nums)[1])
+#    print get_inversion_count(nums)
+#    print merge_sort(nums)[1]
+
+

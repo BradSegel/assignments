@@ -82,7 +82,6 @@ def plot_numbers(list_of_dicts):
     plt.legend(['m values','n value'])
     plt.show()
 
-
 if __name__ == '__main__':
     starter = time.ctime()
     results = gdc_looper(50001,100)
