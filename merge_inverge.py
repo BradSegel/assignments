@@ -40,13 +40,13 @@ def get_inversion_count(unsorted_list):
 
 if __name__ == '__main__':
     # import random
-    # sorter = [int(1000 * random.random()) for i in xrange(100)]
-    # print (sorter, get_inversion_count(sorter))
+    # sorter = [int(1000 * random.random()) for i in xrange(1000)]
+    # print 'before: {}'.format((sorter, get_inversion_count(sorter)))
     # print 'result: {}'.format(merge_sort(sorter))
 
     nums = []
     with open('IntegerArray.txt', 'r') as f:
         nums = [int(x) for x in f.read().split("\r\n") if x ]
 
-#    print get_inversion_count(nums)
-    print merge_sort(nums)[1]
+    print "brute: {}".format(get_inversion_count(nums))
+    print "merge: {}".format(merge_sort(nums)[1])

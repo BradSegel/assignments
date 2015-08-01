@@ -65,7 +65,6 @@ def gdc_looper( max_n=1000, n_step=100 ):
 
 
 def plot_timing(list_of_dicts):
-
     plt = pyplot
 
     plt.plot([a['N'] for a in list_of_dicts],[a['time_for_answer'] for a in list_of_dicts],[a['N'] for a in list_of_dicts],[a['time_to_run'] for a in list_of_dicts])
