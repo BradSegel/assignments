@@ -84,7 +84,7 @@ def plot_numbers(list_of_dicts):
 
 if __name__ == '__main__':
     starter = time.ctime()
-    results = gdc_looper(50001,100)
+    results = gdc_looper(30000,100)
     ender = time.ctime()
 
     plot_timing( results )
